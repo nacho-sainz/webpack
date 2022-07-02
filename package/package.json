@@ -1,0 +1,15 @@
+{
+  "name": "webpack-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "package",
+    "library"
+  ],
+  "author": "NEXTIVA",
+  "license": "MIT"
+}
