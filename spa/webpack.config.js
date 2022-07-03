@@ -1,7 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const devServer = {
+  hot: true,
+  open: true,
+  port: 3000,
+};
+
 const configuration = {
+  devServer,
   entry: path.resolve(__dirname, './src/index.js'),
   mode: 'development',
   module: {
