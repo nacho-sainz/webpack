@@ -1,7 +1,6 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 
-function App() {
-  return <div>Test application</div>;
-}
-
-ReactDOM.render(<App />, document.getElementById('webpack-spa-container'));
+const container = document.getElementById('webpack-spa-container');
+const root = createRoot(container);
+root.render(<App />);
