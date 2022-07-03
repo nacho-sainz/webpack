@@ -1,3 +1,7 @@
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 
-render(<div>Test application</div>, document.getElementById('webpack-spa-container'));
+function App() {
+  return <div>Test application</div>;
+}
+
+ReactDOM.render(<App />, document.getElementById('webpack-spa-container'));
