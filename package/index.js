@@ -1,1 +1,1 @@
-export { formatPhone } from './phone';
+export { formatPhone, getPhoneNumberMetaData } from './phone';
