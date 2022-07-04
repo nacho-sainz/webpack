@@ -1,12 +1,16 @@
 import { Box, styled } from '@mui/material';
 
 const EmptyContactsContainer = styled(Box)`
-  border: 1px solid #efefef;
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 16px;
-  text-align: center;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `;
 
-export { EmptyContactsContainer };
+const ContactsContainer = styled(Box)`
+  > div:nth-child(2n) {
+    background-color: #d9d9d9;
+  }
+`;
+
+export { EmptyContactsContainer, ContactsContainer };

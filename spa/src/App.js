@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Button, Dialog, Divider, Typography } from '@mui/material';
+import { Button, Dialog, Typography } from '@mui/material';
 
 import ContactList from './ContactList';
 import ContactForm from './ContactForm/ContactForm';

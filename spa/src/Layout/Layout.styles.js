@@ -16,6 +16,7 @@ const Main = styled(Box)`
   background-color: #ededed;
   box-sizing: border-box;
   height: calc(100vh - ${headerHeight} - ${footerHeight});
+  overflow: auto;
 `;
 Main.defaultProps = {
   component: 'main',

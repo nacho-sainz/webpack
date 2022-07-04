@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
-import { EmptyContactsContainer } from './ContactList.styles';
+import ContactSummary from '../ContactSummary';
+import { ContactsContainer, EmptyContactsContainer } from './ContactList.styles';
 
 function ContactList({ contacts = [] }) {
   if (!contacts.length) {
@@ -10,13 +11,11 @@ function ContactList({ contacts = [] }) {
     );
   }
   return (
-    <Box component="ul">
+    <ContactsContainer>
       {contacts.map(contact => (
-        <Box component="li" key={contact.firstName}>
-          {contact.firstName} {contact.lastName}
-        </Box>
+        <ContactSummary key={contact.firstName} contact={contact} />
       ))}
-    </Box>
+    </ContactsContainer>
   );
 }
 
