@@ -1,8 +1,13 @@
 import { Box } from '@mui/material';
+import { EmptyContactsContainer } from './ContactList.styles';
 
 function ContactList({ contacts = [] }) {
   if (!contacts.length) {
-    return <Box>You haven't add contacts. Please click on create contact to start!</Box>;
+    return (
+      <EmptyContactsContainer>
+        You haven't add contacts. Please click on create contact to start.
+      </EmptyContactsContainer>
+    );
   }
   return (
     <Box component="ul">

@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Button, Dialog } from '@mui/material';
+import { Box, Button, Dialog, Divider, Typography } from '@mui/material';
 
 import ContactList from './ContactList';
 import ContactForm from './ContactForm/ContactForm';
+import { Footer, Header, Main } from './Layout';
 
 function App() {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -20,15 +21,24 @@ function App() {
   }
 
   return (
-    <div>
-      <ContactList contacts={contacts} />
+    <>
+      <Header>
+        <Typography fontSize="2rem" fontWeight="bold" variant="h1">
+          Contact
+        </Typography>
+      </Header>
+      <Main>
+        <ContactList contacts={contacts} />
+      </Main>
+      <Footer>
+        <Button onClick={openContactForm} variant="contained">
+          Create contact
+        </Button>
+      </Footer>
       <Dialog open={showContactForm} onClose={closeContactForm}>
         <ContactForm onCreate={onCreate} />
       </Dialog>
-      <Button onClick={openContactForm} variant="contained">
-        Create contact
-      </Button>
-    </div>
+    </>
   );
 }
 
