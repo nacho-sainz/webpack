@@ -7,7 +7,7 @@ function ContactSummary({ contact }) {
       <Avatar></Avatar>
       <Box sx={{ ml: '16px', width: '100%' }}>
         <Typography>{`${contact.firstName ?? ''} ${contact.lastName ?? ''}`}</Typography>
-        <Typography>{formatPhone(contact.phoneNumber)}</Typography>
+        <Typography>{formatPhone(contact.phoneNumber, process.env.REACT_APP_PHONE_PATTERN)}</Typography>
       </Box>
     </Box>
   );

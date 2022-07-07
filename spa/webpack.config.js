@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const devServer = {
   hot: true,
@@ -23,6 +24,7 @@ const configuration = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
     }),
+    new Dotenv(),
   ],
 };
 
